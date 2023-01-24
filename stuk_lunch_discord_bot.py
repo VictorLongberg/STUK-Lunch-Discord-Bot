@@ -54,7 +54,7 @@ async def get_menu_text():
             for meal in meals:
                 formatted_menu += "• " + meal + "\n"
 
-        formatted_menu = "\n**Stuk Lunch Menu:  **\n" + formatted_menu
+        formatted_menu = "\n**Stuk Lunch Meny:  **\n" + formatted_menu
 
         return formatted_menu
 
@@ -98,7 +98,7 @@ async def on_message(message):
                 return
             last_menu_time = current_time
 
-            await delete_all_user_messages(message.channel, client.user.id, "Stuk Lunch Menu:")
+            await delete_all_user_messages(message.channel, client.user.id, "Stuk Lunch Meny:")
             
             menu_text = await get_menu_text()
             await message.channel.send(menu_text)
