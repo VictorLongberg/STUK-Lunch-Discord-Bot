@@ -10,7 +10,7 @@ This is a simple Discord bot that fetches the daily menu from the website [STUK]
 ## Installation
 1. Clone the repository using `git clone https://github.com/[your_username]/stuk-lunch-discord-bot.git`
 2. Navigate to the cloned repository and create a new file called `.env`
-3. In the `.env` file, add your Discord bot token like this: `TOKEN=your_token_here`
+3. In the `.env` file, add your Discord bot token like this: `SECRET_KEY_DISCORD=your_token_here`
 4. Make sure you have `discord.py` and `requests_html` installed. If not, run `pip install discord.py requests_html` in your command prompt
 5. Run the script using `python stuk_lunch_discord_bot.py`
 
