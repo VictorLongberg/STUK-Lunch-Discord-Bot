@@ -29,5 +29,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgment
 * [STUK](https://www.stuk.nu/) for providing the menu data
+* [Matochmat](https://www.matochmat.se/lunch/lulea/stuk/) for providing the alternativ menu data
 * [Discord API](https://discord.com/developers/docs/intro) for providing the Discord bot functionality
 * [requests_html](https://requests.readthedocs.io/projects/requests-html/en/latest/) for making it easy to scrape the menu from the website
