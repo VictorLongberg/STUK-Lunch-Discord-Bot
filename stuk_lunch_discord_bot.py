@@ -63,17 +63,13 @@ async def get_menu_text():
             itemlist.append(item.text)
 
         # Formatting the list
-        cleaned_list = [re.sub(r"(\d+ kr|\nkr)", "", item)
-                        for item in itemlist if "Lördag" not in item and "Söndag" not in item]
-        cleaned_list = [re.sub(r"\n105\xa0kr\n", " ", item)
-                        for item in cleaned_list]  # for the matchomat menu
-        cleaned_list = [re.sub(r"\nmed", " ", item)
-                        for item in cleaned_list]  # for the matchomat menu
+        cleaned_list = [re.sub(r"(\d+ kr|\nkr)", "", item) for item in itemlist if "Lördag" not in item and "Söndag" not in item]
+        cleaned_list = [re.sub(r"\n105\xa0kr\n", " ", item) for item in cleaned_list]  # for the matchomat menu
+        cleaned_list = [re.sub(r"\nmed", " ", item) for item in cleaned_list]  # for the matchomat menu
         cleaned_list = [re.sub(r"\n\n", " ", item) for item in cleaned_list]
         cleaned_list = [re.sub(r"(\n)$", "", item) for item in cleaned_list]
         cleaned_list = [re.sub(r"\n\n", " ", item) for item in cleaned_list]
-        cleaned_list = [re.sub(r"\n([a-z])", r" \1", item)
-                        for item in cleaned_list]
+        cleaned_list = [re.sub(r"\n([a-z])", r" \1", item) for item in cleaned_list]
 
         formatted_menu = ""
         for item in cleaned_list:
@@ -180,22 +176,10 @@ async def on_message(message):
                 await bot_message.delete(delay=60)
                 await message.delete()
 
-    elif message.content.startswith("!"):
-        try:
-            bot_message = await message.channel.send("Invalid command. Please use `!help` to see a list of valid commands.")
-            await bot_message.delete(delay=60)  # delete after 1 minutes
-            await message.delete()
-        except discord.errors.HTTPException as e:
-            if e.status == 403:
-                print(f'An error occurred: {e}')
-                bot_message = await message.channel.send(' `\nSorry, the bot cannot remove commands sent directly to the bot`')
-                await bot_message.delete(delay=60)
-                await message.delete()
-            elif e.status:
-                print(f'An error occurred: {e}')
-                bot_message = await message.channel.send('`\nAn unexpected Error Occured`')
-                await bot_message.delete(delay=60)
-                await message.delete()
+    else:
+        bot_message = await message.channel.send("Invalid command. Please use `!help` to see a list of valid commands.")
+        await bot_message.delete(delay=60)  # delete after 1 minutes
+        await message.delete()
 
 # Run the bot
 client.run(os.getenv('SECRET_KEY_DISCORD'))
