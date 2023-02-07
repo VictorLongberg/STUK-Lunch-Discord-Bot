@@ -40,6 +40,7 @@ commands = {
     "   **!menu**": "`Displays the restaurant's menu`",
     "   **!help**": "`Lists all the commands the bot has`",
     "   **!url**": "`shows the url from which the menu was taken`",
+    "   **!pdf**": "`shows an image of the menu"
 }
 
 # Builds the download url.
@@ -50,7 +51,7 @@ def build_url(base_url, restaurant, pdf_type,pdf):
     dynamic_url = f"&pdf={pdf}&pdfType={pdf_type}&restaurant={restaurant}&week={week}&year={year}"
     return base_url + dynamic_url
 
-# TODO Fix so that the error message gets deleted after 60s in this !Menu / get_menu_text()
+# TODO Fix so that the error message gets deleted after 60s if !Menu / get_menu_text() fails
 # Format the menu text
 async def get_menu_text():
     try:
@@ -260,12 +261,3 @@ async def on_message(message):
 
 # Run the bot
 client.run(os.getenv('SECRET_KEY_DISCORD'))
-
-
-
-[
-'Måndag 6/2\nPyttipanna med rödbetor, senapscremé **Glutenfri** **Laktosfri** \nCurrymadras kycklinggryta med jasminris **Glutenfri** **Laktosfri** \nChili sin carne med jasminris  **Vegansk** ', 
-'Tisdag 7/2\nPanko friterad kyckling med sweet chilisås, ris Laktosfri\nPastagratäng med bacon, grädde, ost Svampsoppa, vitlöksbröd, cremé fraiche  **Vegansk** **Glutenfri** ', 
-'Onsdag 8/2\nKöttfärslimpa med stekt potatis, pepparsås **Glutenfri** \nFläskgryta med gröncurry & kokosgrädde. jasminris **Glutenfri** **Laktosfri**\nOumph med vitlöksfrästa grönsaker, serveras med ris eller potatis  **Vegansk** ', 
-'Torsdag 9/2\nTacogratäng serveras med tacochips, salsa, gräddfil Vegetarisk fajita med serveras med tacochips, salsa, gräddfil', 
-'Fredag 10/2\nFläskkarré med varm bbq-sås, potatisgratäng Äggnudelwok med kyckling Morotsbiffar med rostad potatis  **Vegansk** **Glutenfri** ']
