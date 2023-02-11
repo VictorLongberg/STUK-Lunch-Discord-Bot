@@ -2,3 +2,4 @@
 geckodriver.log
 pdf_file.pdf_dir/0_pdf_file.pdf.jpg
 pdf_file.pdf
+*.pyc

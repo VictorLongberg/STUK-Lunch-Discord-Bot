@@ -20,6 +20,7 @@ Once the bot is running and added to your Discord server, you can use the follow
 - `!menu` - Displays the restaurant's menu
 - `!help` - Lists all the commands the bot has
 - `!url` - shows the url from which the menu was taken
+- `!pdf` - shows the menu from the resturant as an image
 
 ## Contribution
 Feel free to contribute to this project by submitting pull requests.
