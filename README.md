@@ -6,13 +6,15 @@ This is a simple Discord bot that fetches the daily menu from the website [STUK]
 - Displays the restaurant's menu
 - Lists all the commands the bot has
 - Shows the url from which the menu was taken
+- Can post the menu as text or image format
 
 ## Installation
-1. Clone the repository using `git clone https://github.com/[your_username]/stuk-lunch-discord-bot.git`
+1. Clone the repository using `git clone https://github.com/VictorLongberg/stuk-lunch-discord-bot.git`
 2. Navigate to the cloned repository and create a new file called `.env`
-3. In the `.env` file, add your Discord bot token like this: `SECRET_KEY_DISCORD=your_token_here`
-4. Make sure you have `discord.py` and `requests_html` installed. If not, run `pip install discord.py requests_html` in your command prompt
-5. Run the script using `python stuk_lunch_discord_bot.py`
+3. Make sure you have `discord.py` and `requests_html` installed. If not, run `pip install discord.py requests_html` in your command prompt
+4. Setup a discord bot in your own channel using this code using [discords](https://discordpy.readthedocs.io/en/stable/discord.html) documentation.
+5. In the `.env` file, add your Discord bot token like this: `SECRET_KEY_DISCORD=your_token_here`
+6. Run the script using `bot.py`
 
 ## Usage
 Once the bot is running and added to your Discord server, you can use the following commands to interact with it:
