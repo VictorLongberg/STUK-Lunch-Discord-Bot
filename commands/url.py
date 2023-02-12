@@ -1,5 +1,5 @@
+from config import url_stuk, url_matochmat, bot_dm, bot_general
 import discord
-from config import url_stuk, url_matochmat
 
 async def url(message):
     try:
@@ -10,11 +10,11 @@ async def url(message):
     except discord.errors.HTTPException as e:
         if e.status == 403:
             print(f'An error occurred: {e}')
-            bot_message = await message.channel.send(' `\nSorry, the bot cannot remove commands sent directly to the bot`')
+            bot_message = await message.channel.send(bot_dm)
             await bot_message.delete(delay=60)
             await message.delete()
         elif e.status:
             print(f'An error occurred: {e}')
-            bot_message = await message.channel.send('`\nAn unexpected Error Occured`')
+            bot_message = await message.channel.send(bot_general)
             await bot_message.delete(delay=60)
             await message.delete()

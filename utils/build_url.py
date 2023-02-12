@@ -1,7 +1,7 @@
 import datetime
 
 # Builds the download url.
-def build_url(base_url, restaurant, pdf_type,pdf):
+def build_url(base_url, restaurant, pdf_type, pdf):
     now = datetime.datetime.now()
     week = now.strftime("%U")
     year = now.year

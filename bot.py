@@ -1,8 +1,9 @@
+from dotenv import load_dotenv
+from config import bot_command
 from commands.menu import menu
 from commands.help import help
 from commands.pdf import pdf
 from commands.url import url
-from dotenv import load_dotenv
 import discord
 import os
 
@@ -40,7 +41,7 @@ async def on_message(message):
         await url(message)
 
     else: #invalid command
-        bot_message = await message.channel.send('Invalid command. Please use `!help` to see a list of valid commands.')
+        bot_message = await message.channel.send(bot_command)
         await bot_message.delete(delay=60)  # delete after 1 minutes
         await message.delete()
 

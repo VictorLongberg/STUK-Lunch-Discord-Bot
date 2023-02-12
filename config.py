@@ -24,3 +24,19 @@ commands = {
     "   **!url**": "`shows the url from which the menu was taken`",
     "   **!pdf**": "`shows an image of the menu`"
 }
+
+# Bot error messages
+
+bot_dm = ' `\nSorry, the bot cannot remove commands sent directly to the bot`'
+
+bot_general = '`\nAn unexpected Error Occured`'
+
+bot_menu = ' `\nSorry, an error occurred while trying to fetch the data, try again later`'
+
+bot_missing_menu = "\n**The menu has not yet been uploaded, try again later **"
+
+bot_command = 'Invalid command. Please use `!help` to see a list of valid commands.'
+
+# remove all message strings from utils
+
+bot_menu_removal = "Stuk Lunch Menu:"

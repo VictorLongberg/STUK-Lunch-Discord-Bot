@@ -1,6 +1,6 @@
+from config import url_stuk, url_stuk_div, url_matochmat, url_matochmat_div, bot_menu, bot_missing_menu
 from requests_html import AsyncHTMLSession
 import re
-from config import url_stuk, url_stuk_div, url_matochmat, url_matochmat_div
 
 # TODO Fix so that the error message gets deleted after 60s if !Menu / get_menu_text() fails
 # Format the menu text
@@ -78,11 +78,11 @@ async def get_menu_text():
 
         # if the fommatted menu is empty, theres nothing to scrape from, the menu has yet to be updated.
         if len(formatted_menu) == 0:
-            formatted_menu = "\n**The menu has not yet been uploaded, try again later **"
+            formatted_menu = bot_menu_missing
             return formatted_menu
         formatted_menu = "\n**Stuk Lunch Menu:  **\n\n**  Source**: <" + source + ">\n" + formatted_menu
         return formatted_menu
 
     except Exception as e:
         print(f'An error occurred: {e}')
-        return 'Sorry, an error occurred while trying to fetch the menu.'
+        return bot_menu
