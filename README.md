@@ -28,6 +28,7 @@ git clone https://github.com/VictorLongberg/stuk-lunch-discord-bot.git
 - `requests_html`
 - `requests` 
 - `pdf2jpg`
+
 If not, run
  ```
  pip install discord.py requests_html requests pdf2jpg
