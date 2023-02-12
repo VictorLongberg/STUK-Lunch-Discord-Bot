@@ -19,13 +19,15 @@ This is a simple Discord bot that fetches the daily menu from the website [STUK]
 - Shows the url from which the menu was taken
 
 ## Installation
-1. Clone the repository using ```git clone https://github.com/VictorLongberg/stuk-lunch-discord-bot.git```
+1. Clone the repository using 
+```git clone https://github.com/VictorLongberg/stuk-lunch-discord-bot.git```
 2. Make sure you have installed the required library dependencies:
 - `discord.py`
 - `requests_html`
 - `requests` 
 - `pdf2jpg`
-If not, run ```pip install discord.py requests_html requests pdf2jpg``` in your command prompt
+If not, run
+ ```pip install discord.py requests_html requests pdf2jpg``` 
 3. Navigate to the cloned repository and create a new file called `.env` in the project root folder
 ```
 📦STUK-Lunch-Discord-Bot
