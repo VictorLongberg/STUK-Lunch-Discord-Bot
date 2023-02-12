@@ -67,6 +67,16 @@ Once the bot is running and added to your Discord server, you can use the follow
 - `!pdf` - shows the menu from the resturant as an image
 
 
+## TODOS
+
+- Add menu prompts for [centrumrestaurangen](https://www.matochmat.se/lunch/lulea/centrumrestaurangen-ltu) to the bot
+- Add menu prompts for ICA Porsön.
+- Add optinons to prompt menu text for specific day.
+- Logging errors, commands prompts...
+- Database for previous weeks
+- Testing
+- Make !menu timeout channel specific
+
 ## Versions
 - python-dotenv==0.21.0
 - discord==2.1.0
